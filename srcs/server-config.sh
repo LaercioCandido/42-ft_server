@@ -15,3 +15,10 @@ mv  phpMyAdmin-5.0.2-english /var/www/localhost/phpmyadmin
 cp /root/nginx.conf /etc/nginx/sites-available/default
 cp /root/config.inc.php /var/www/localhost/phpmyadmin/config.inc.php
 chown -R www-data:www-data /var/www/localhost/phpmyadmin
+
+# Instala o wordpress
+wget https://br.wordpress.org/latest-pt_BR.tar.gz
+tar -xzvf latest-pt_BR.tar.gz
+rm -rf latest-pt_BR.tar.gz
+cp wp-config.php /wordpress/wp-config.php
+mv wordpress /var/www/localhost
