@@ -29,6 +29,8 @@ $cfg['Servers'][$i]['auth_type'] = 'cookie';
 $cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
+$cfg['Servers'][$i]['controluser'] = 'lcandido';
+$cfg['Servers'][$i]['controlpass'] = '1234';
 
 /**
  * phpMyAdmin configuration storage settings.
@@ -41,6 +43,7 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
 // $cfg['Servers'][$i]['controlpass'] = 'root';
 
 /* Storage database and tables */
+/*
  $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
  $cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
  $cfg['Servers'][$i]['relation'] = 'pma__relation';
@@ -61,6 +64,9 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
  $cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
  $cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
  $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
+*/
+
+
 
 /**
  * End of servers configuration

@@ -16,17 +16,17 @@ cp /root/nginx.conf /etc/nginx/sites-available/default
 cp /root/config.inc.php /var/www/localhost/phpmyadmin/config.inc.php
 chown -R www-data:www-data /var/www/localhost/phpmyadmin
 
-# Database e User do wordpress
-echo "CREATE DATABASE wordpress;" | mysql -u root
-echo "CREATE USER 'wordpress'@'localhost' IDENTIFIED BY '1234';" | mysql -u root
-echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost' WITH GRANT OPTION;" | mysql -u root
-echo "FLUSH PRIVILEGES;" | mysql -u root
-
-# Configurando superuser phpmyadmin
+# Configura superuser phpmyadmin
 service mysql start
 echo "CREATE DATABASE wordpress;" | mysql -u root
 echo "CREATE USER 'lcandido'@'localhost' IDENTIFIED BY '1234';" | mysql -u root
 echo "GRANT ALL PRIVILEGES ON *.* TO 'lcandido'@'localhost' WITH GRANT OPTION;" | mysql -u root
+echo "FLUSH PRIVILEGES;" | mysql -u root
+
+# Database e User do wordpress
+echo "CREATE DATABASE wordpress;" | mysql -u root
+echo "CREATE USER 'wordpress'@'localhost' IDENTIFIED BY '1234';" | mysql -u root
+echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost' WITH GRANT OPTION;" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
 
 # Instala o wordpress
