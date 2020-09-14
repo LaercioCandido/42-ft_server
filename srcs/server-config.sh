@@ -37,4 +37,12 @@ rm -rf wordpress-5.5.1-pt_BR.tar.gz
 mv wordpress /var/www/localhost/wordpress
 cp wp-config.php /var/www/localhost/wordpress
 
+# Configura o SSL
+openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
+	-subj "/C=BR/ST=Sao Paulo/L=Sao Paulo/O=42SP/OU=lcandido/CN=localhost/emailAddress=lcandido@student.42sp.org" \
+	-keyout localhost.dev.key \
+	-out localhost.dev.crt  2>> /dev/null
+mv localhost.dev.crt /etc/ssl/certs/
+mv localhost.dev.key /etc/ssl/private/
+chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
 

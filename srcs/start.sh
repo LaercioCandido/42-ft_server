@@ -2,6 +2,7 @@
 /etc/init.d/nginx start
 /etc/init.d/mysql start
 /etc/init.d/php7.3-fpm start
+# tail -F /dev/null
 
 echo "
                     ##        .            
@@ -23,3 +24,5 @@ echo "
 "
 # Permite que o container fique aberto para interagir com os arquivos
 bash
+
+tail -F /dev/null
