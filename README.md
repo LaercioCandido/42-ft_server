@@ -32,9 +32,6 @@ git clone https://github.com/laerciocandido/42-ft_server.git
 `docker stop $(CONTAINER_NAME)` stops the container\
 `docker rmi $(IMAGE_NAME)` removes the image\
 `docker rm $(CONTAINER_NAME)` removes the container\
-`docker exec -it $(CONTAINER_NAME) bash` access the server CLI\
-`docker exec $(CONTAINER_NAME) bash /autoindex.sh on` enables directory listing\
-`docker exec $(CONTAINER_NAME) bash /autoindex.sh off` disables directory listing\
 
 #### Access
 
