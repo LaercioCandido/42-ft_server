@@ -23,6 +23,10 @@ Feel free to download the project:
 git clone https://github.com/laerciocandido/42-ft_server.git
 ```
 
+```
+cd 42-ft_server.git
+```
+
 #### Build Instructions
 
 ###### Docker commands
