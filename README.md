@@ -29,7 +29,7 @@ cd 42-ft_server.git
 
 #### Build Instructions
 
-###### Docker commands
+Docker commands
 
 `docker build -t $(IMAGE_NAME) .` builds the image\
 `docker run -it -p 80:80 -p 443:443 --name $(CONTAINER_NAME) $(IMAGE_NAME)` runs the image as a container\
