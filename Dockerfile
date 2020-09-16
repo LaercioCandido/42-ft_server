@@ -17,8 +17,8 @@ RUN apt-get update && \
     php-mbstring && \
     bash /root/server-config.sh
 
-# A partir do bash executa o start.sh (que inicia o nginx, mysql)
+# A partir do bash executa o start.sh (que inicia o nginx, mysql, php)
 ENTRYPOINT bash /root/start.sh
 
-# Define o command bash para permitir interação 
-CMD bash
+# Executa o container por tempo indeterminado
+CMD tail -f /dev/null

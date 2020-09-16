@@ -24,5 +24,3 @@ echo "
 "
 # Permite que o container fique aberto para interagir com os arquivos
 bash
-
-tail -F /dev/null
